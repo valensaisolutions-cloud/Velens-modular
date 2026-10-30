@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valens AI - Automação Inteligente para PMEs</title>
+    <!-- Tailwind CSS para design moderno e responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl font-black tracking-tight text-emerald-400">VALENS AI</span>
+            </div>
+            <a href="#configurador" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition shadow-lg shadow-emerald-500/25">
+                Criar Meu Sistema
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 pt-20 pb-16 text-center">
+        <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded-full text-emerald-400 text-sm mb-6">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Atendimento Automatizado 24/7 em Portugal e Europa</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight max-w-4xl mx-auto leading-tight mb-6">
+            Coloque a Inteligência Artificial a trabalhar para o seu negócio.
+        </h1>
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+            Escolha os módulos que precisa, monte o seu pacote à medida e automatize o WhatsApp, o Instagram e as vendas sem complicações técnicas.
+        </p>
+    </section>
+
+    <!-- Configurador Modular Interativo -->
+    <section id="configurador" class="max-w-5xl mx-auto px-6 py-12">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">Configure a sua Solução Modular</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-10">
+                <!-- Módulo 1 -->
+                <label class="flex items-start space-x-4 p-5 rounded-2xl bg-slate-950/50 border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="79" checked onchange="calcularTotal()">
+                    <div>
+                        <span class="font-bold text-lg block">Agente de Atendimento WhatsApp</span>
+                        <span class="text-sm text-slate-400">Responde a clientes 24/7 tirando dúvidas instantaneamente.</span>
+                        <span class="text-emerald-400 font-bold block mt-2">79€ / mês</span>
+                    </div>
+                </label>
+
+                <!-- Módulo 2 -->
+                <label class="flex items-start space-x-4 p-5 rounded-2xl bg-slate-950/50 border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="49" checked onchange="calcularTotal()">
+                    <div>
+                        <span class="font-bold text-lg block">Automação de Instagram (Directs)</span>
+                        <span class="text-sm text-slate-400">Conversão automática de comentários e mensagens diretas.</span>
+                        <span class="text-emerald-400 font-bold block mt-2">49€ / mês</span>
+                    </div>
+                </label>
+
+                <!-- Módulo 3 -->
+                <label class="flex items-start space-x-4 p-5 rounded-2xl bg-slate-950/50 border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="39" onchange="calcularTotal()">
+                    <div>
+                        <span class="font-bold text-lg block">Agendamento Automático</span>
+                        <span class="text-sm text-slate-400">Marcação de serviços e consultas integrada no calendário.</span>
+                        <span class="text-emerald-400 font-bold block mt-2">39€ / mês</span>
+                    </div>
+                </label>
+
+                <!-- Módulo 4 -->
+                <label class="flex items-start space-x-4 p-5 rounded-2xl bg-slate-950/50 border border-slate-800 cursor-pointer hover:border-emerald-500/50 transition">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="59" onchange="calcularTotal()">
+                    <div>
+                        <span class="font-bold text-lg block">Qualificação de Leads & Remarketing</span>
+                        <span class="text-sm text-slate-400">Filtra potenciais clientes e reengaja campanhas antigas.</span>
+                        <span class="text-emerald-400 font-bold block mt-2">59€ / mês</span>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Resumo e Checkout -->
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="text-slate-400 text-sm block">Implementação inicial: <strong class="text-emerald-400">GRÁTIS</strong></span>
+                    <span class="text-3xl font-black text-white" id="valorTotal">128€</span> <span class="text-slate-400 text-sm">/ mês</span>
+                </div>
+                <button onclick="alert('Redirecionando para o Stripe / Checkout seguro...')" class="w-full md:w-auto bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold px-8 py-4 rounded-2xl transition text-lg shadow-xl shadow-emerald-500/20">
+                    Ativar Sistema Agora
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção de Tutoriais Passo a Passo (iOS, Android, PC) -->
+    <section class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-900">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold mb-4">Como Configurar em Menos de 2 Minutos</h2>
+            <p class="text-slate-400">Sem complicações técnicas. Selecione o seu dispositivo e veja o guia rápido em vídeo:</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- iOS -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                <div class="text-emerald-400 font-bold text-xl mb-2">📱 iPhone / iOS</div>
+                <p class="text-sm text-slate-400 mb-4">Como conectar e autorizar conexões rápidas no Safari.</p>
+                <div class="bg-slate-950 aspect-video rounded-xl flex items-center justify-center border border-slate-800 text-slate-500">
+                    [Vídeo Tutorial iOS - 20s]
+                </div>
+            </div>
+
+            <!-- Android -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                <div class="text-emerald-400 font-bold text-xl mb-2">🤖 Android</div>
+                <p class="text-sm text-slate-400 mb-4">Passo a passo para otimizar o acesso via Google Chrome.</p>
+                <div class="bg-slate-950 aspect-video rounded-xl flex items-center justify-center border border-slate-800 text-slate-500">
+                    [Vídeo Tutorial Android - 20s]
+                </div>
+            </div>
+
+            <!-- Windows / PC -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                <div class="text-emerald-400 font-bold text-xl mb-2">💻 Windows / PC</div>
+                <p class="text-sm text-slate-400 mb-4">Configuração avançada para painel de gestão no computador.</p>
+                <div class="bg-slate-950 aspect-video rounded-xl flex items-center justify-center border border-slate-800 text-slate-500">
+                    [Vídeo Tutorial PC - 20s]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script de Cálculo Dinâmico -->
+    <script>
+        function calcularTotal() {
+            const checkboxes = document.querySelectorAll('.modulo-item:checked');
+            let total = 0;
+            checkboxes.forEach(cb => {
+                total += parseInt(cb.value);
+            });
+            document.getElementById('valorTotal').innerText = total + '€';
+        }
+    </script>
+</body>
+</html>
