@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valens AI | Automação & Agentes de IA para PMEs</title>
+    <title>Valens AI | Automação, IA & Consultoria Tecnológica para PMEs</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -12,6 +12,7 @@
             background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 1.5rem;
         }
         .glow-effect {
             box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3);
@@ -19,6 +20,41 @@
         .bg-grid {
             background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
             background-size: 28px 28px;
+        }
+        
+        @keyframes scrollLoop {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: scrollLoop 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .marquee-container::before, .marquee-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none;
+        }
+        .marquee-container::before {
+            left: 0;
+            background: linear-gradient(to right, #030712, transparent);
+        }
+        .marquee-container::after {
+            right: 0;
+            background: linear-gradient(to left, #030712, transparent);
         }
     </style>
 </head>
@@ -33,7 +69,8 @@
             </div>
             <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-300">
                 <a href="#missao" class="hover:text-emerald-400 transition">A Nossa Missão</a>
-                <a href="#impacto" class="hover:text-emerald-400 transition">O Poder da IA</a>
+                <a href="#planos" class="hover:text-emerald-400 transition">Planos</a>
+                <a href="#depoimentos" class="hover:text-emerald-400 transition">Depoimentos</a>
                 <a href="#configurador" class="hover:text-emerald-400 transition">Calculadora</a>
                 <a href="#tutoriais" class="hover:text-emerald-400 transition">Tutoriais</a>
             </div>
@@ -49,328 +86,4 @@
 
         <div class="inline-flex items-center space-x-2 bg-slate-900/90 border border-emerald-500/30 px-4 py-2 rounded-full text-emerald-400 text-xs font-bold uppercase tracking-widest mb-8 shadow-inner">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>Acessibilidade & Qualidade para PMEs &bull; Checkout Seguro via Stripe</span>
-        </div>
-        
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight mb-6 text-white">
-            Cada minuto sem resposta é <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500">dinheiro a fugir</span> para o concorrente.
-        </h1>
-        
-        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
-            Democratizamos a Inteligência Artificial para pequenos e médios empresários. Atendimento automático 24/7 no WhatsApp e Instagram com total transparência e controlo.
-        </p>
-
-        <!-- Imagem Comercial / Dashboard -->
-        <div class="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-slate-800 shadow-2xl glow-effect mb-12">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Dashboard Valens AI" class="w-full object-cover opacity-90 hover:scale-105 transition duration-700">
-        </div>
-
-        <!-- Indicadores Rápidos -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
-            <div class="glass-card p-4 rounded-2xl border border-slate-800">
-                <div class="text-2xl font-black text-emerald-400">&lt; 5 Seg.</div>
-                <div class="text-xs text-slate-400 font-medium">Resposta Instantânea</div>
-            </div>
-            <div class="glass-card p-4 rounded-2xl border border-slate-800">
-                <div class="text-2xl font-black text-emerald-400">+ 3x</div>
-                <div class="text-xs text-slate-400 font-medium">Aumento de Conversão</div>
-            </div>
-            <div class="glass-card p-4 rounded-2xl border border-slate-800">
-                <div class="text-2xl font-black text-emerald-400">100%</div>
-                <div class="text-xs text-slate-400 font-medium">Transparência nos Custos</div>
-            </div>
-            <div class="glass-card p-4 rounded-2xl border border-slate-800">
-                <div class="text-2xl font-black text-emerald-400">24 / 7</div>
-                <div class="text-xs text-slate-400 font-medium">Vendas no Automático</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Secção de Missão & Democratização da IA -->
-    <section id="missao" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-900">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="text-emerald-400 font-extrabold text-xs uppercase tracking-widest block mb-3">A Nossa Origem & Propósito</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-6 leading-tight">
-                    Tecnologia de ponta acessível a quem realmente faz a economia acontecer.
-                </h2>
-                <p class="text-sm text-slate-300 leading-relaxed mb-4">
-                    A <strong>Valens AI</strong> nasceu de uma convicção clara: a inteligência artificial e a automação avançada não devem ser privilégio exclusivo de grandes corporações com orçamentos milionários. 
-                </p>
-                <p class="text-sm text-slate-400 leading-relaxed mb-6">
-                    O nosso maior objetivo é dar <strong>acessibilidade com alta qualidade a pequenos e médios empresários</strong>. O pequeno comerciante, a clínica ou o prestador de serviços local não pode perder clientes por falta de tempo ou por custos proibitivos. Criámos a Valens AI para nivelar o jogo: tudo é calculated ao cêntimo, sem surpresas, com planos justos e transparentes.
-                </p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800">
-                        <div class="text-emerald-400 font-bold text-base mb-1">Para Pequenos Empresários</div>
-                        <div class="text-xs text-slate-400">Ferramentas potentes desenhadas para o comércio e serviços locais.</div>
-                    </div>
-                    <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800">
-                        <div class="text-emerald-400 font-bold text-base mb-1">Tudo Calculado</div>
-                        <div class="text-xs text-slate-400">Orçamento dinâmico, modular e transparente à vista de todos.</div>
-                    </div>
-                </div>
-            </div>
-            <div class="relative">
-                <div class="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-teal-400 rounded-3xl blur-xl opacity-30"></div>
-                <div class="relative glass-card p-8 rounded-3xl border border-slate-800">
-                    <h3 class="text-xl font-bold text-white mb-4">O Compromisso Valens AI</h3>
-                    <ul class="space-y-4 text-xs text-slate-300">
-                        <li class="flex items-start space-x-3">
-                            <span class="text-emerald-400 font-bold text-base">✓</span>
-                            <span><strong>Zero Fidelização Forçada:</strong> O empresário assina e cancela quando quiser, mantendo total liberdade.</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <span class="text-emerald-400 font-bold text-base">✓</span>
-                            <span><strong>Qualidade Corporativa:</strong> Agentes treinados para responder com precisão, enviar links e fechar agendamentos.</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <span class="text-emerald-400 font-bold text-base">✓</span>
-                            <span><strong>Controlo Local & Seguro:</strong> Privacidade absoluta dos seus dados e credenciais nos seus dispositivos.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Secção de Impacto: Como a IA Gera Dinheiro e Tempo -->
-    <section id="impacto" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-900">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-emerald-400 font-extrabold text-xs uppercase tracking-widest block mb-2">O Verdadeiro ROI da Automação</span>
-            <h2 class="text-3xl font-extrabold text-white tracking-tight">Porquê contratar um Agente Valens AI?</h2>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="glass-card p-8 rounded-3xl border border-slate-800 relative group hover:border-emerald-500/50 transition">
-                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl mb-6">⚡</div>
-                <h3 class="text-lg font-bold text-white mb-3">Velocidade que Fecha Negócios</h3>
-                <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                    "Quem responde primeiro, vende." Estatísticas provam que responder em menos de 5 minutos aumenta em <strong>9x a chance de fechar o negócio</strong>. A IA garante o primeiro contacto imediato.
-                </p>
-                <span class="text-[11px] text-emerald-400 font-bold block">✓ Zero leads frios por demora no atendimento</span>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="glass-card p-8 rounded-3xl border border-slate-800 relative group hover:border-emerald-500/50 transition">
-                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl mb-6">🕒</div>
-                <h3 class="text-lg font-bold text-white mb-3">Liberdade Operacional Absoluta</h3>
-                <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                    Deixe de perder horas preciosas a responder a perguntas repetitivas («Qual o preço?», «Onde ficam?», «Têm vaga?»). O agente filtra os curiosos e entrega apenas os <strong>clientes prontos a comprar</strong>.
-                </p>
-                <span class="text-[11px] text-emerald-400 font-bold block">✓ Foque-se apenas no fecho e na estratégia</span>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="glass-card p-8 rounded-3xl border border-slate-800 relative group hover:border-emerald-500/50 transition">
-                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl mb-6">💰</div>
-                <h3 class="text-lg font-bold text-white mb-3">Faturamento Fim de Semana</h3>
-                <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                    Mais de 40% das intenções de compra online acontecem à noite ou aos fins de semana. Enquanto a concorrência está fechada, o seu negócio continua a recolher contactos e a faturar.
-                </p>
-                <span class="text-[11px] text-emerald-400 font-bold block">✓ Faturamento contínuo 365 dias por ano</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Configurador Modular Dinâmico -->
-    <section id="configurador" class="max-w-5xl mx-auto px-6 py-12">
-        <div class="glass-card rounded-3xl p-8 md:p-12 shadow-2xl relative glow-effect border border-slate-800">
-            
-            <div class="text-center max-w-xl mx-auto mb-10">
-                <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2 text-white">Calculadora & Plano Modular</h2>
-                <p class="text-sm text-slate-400">Tudo calculado ao pormenor. Ative apenas o que precisa, com total transparência.</p>
-            </div>
-
-            <!-- Seleção de Módulos -->
-            <div class="grid md:grid-cols-2 gap-5 mb-10">
-                <!-- Módulo 1 -->
-                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="149" checked onchange="atualizarLógicaValores()">
-                    <div class="w-full">
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-base text-white group-hover:text-emerald-400 transition">Agente WhatsApp 24/7</span>
-                            <span class="text-emerald-400 font-extrabold text-sm">149€ /mês</span>
-                        </div>
-                        <span class="text-xs text-slate-400 mt-2 block leading-relaxed">Atendimento imediato, resposta a dúvidas frequentes, apresentação de preços e envio de catálogo.</span>
-                    </div>
-                </label>
-
-                <!-- Módulo 2 -->
-                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="99" checked onchange="atualizarLógicaValores()">
-                    <div class="w-full">
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-base text-white group-hover:text-emerald-400 transition">Automação Instagram Direct</span>
-                            <span class="text-emerald-400 font-extrabold text-sm">99€ /mês</span>
-                        </div>
-                        <span class="text-xs text-slate-400 mt-2 block leading-relaxed">Conversão automática de comentários em posts e respostas instantâneas no Direct.</span>
-                    </div>
-                </label>
-
-                <!-- Módulo 3 -->
-                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="129" onchange="atualizarLógicaValores()">
-                    <div class="w-full">
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-base text-white group-hover:text-emerald-400 transition">Qualificação de Leads</span>
-                            <span class="text-emerald-400 font-extrabold text-sm">129€ /mês</span>
-                        </div>
-                        <span class="text-xs text-slate-400 mt-2 block leading-relaxed">Filtro de intenção de compra, orçamento disponível e integração com bases de dados.</span>
-                    </div>
-                </label>
-
-                <!-- Módulo 4 -->
-                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="89" onchange="atualizarLógicaValores()">
-                    <div class="w-full">
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-base text-white group-hover:text-emerald-400 transition">Agendamento Automático</span>
-                            <span class="text-emerald-400 font-extrabold text-sm">89€ /mês</span>
-                        </div>
-                        <span class="text-xs text-slate-400 mt-2 block leading-relaxed">Marcação e sincronização automática de horários diretamente no Google Agenda.</span>
-                    </div>
-                </label>
-            </div>
-
-            <!-- Resumo Financeiro & Gerar Link de Pagamento Stripe -->
-            <div class="border-t border-slate-800/80 pt-8">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-950/90 p-6 rounded-2xl border border-slate-800 shadow-inner">
-                    <div>
-                        <div class="flex items-center space-x-2">
-                            <span class="text-xs text-slate-400 font-medium">Investimento Mensal Calculado:</span>
-                            <span id="badgeDesconto" class="hidden text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full font-bold">Pack Completo (-66€)</span>
-                        </div>
-                        <div class="flex items-baseline space-x-2 mt-1">
-                            <span class="text-4xl font-black text-white tracking-tight" id="valorTotal">248€</span>
-                            <span class="text-slate-400 text-sm font-medium">/ mês</span>
-                        </div>
-                        <span class="text-[11px] text-emerald-400 block mt-1 font-semibold">✓ Zero fidelização &bull; Checkout seguro via Stripe</span>
-                    </div>
-
-                    <!-- Botão Ajustado para Checkout Stripe -->
-                    <button onclick="iniciarCheckoutStripe()" class="w-full md:w-auto bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-8 py-4 rounded-xl transition-all text-base shadow-lg shadow-emerald-500/25 hover:scale-105 flex items-center justify-center space-x-2">
-                        <span>Pagar com Stripe</span>
-                        <svg class="w-4 h-4 text-slate-950" fill="currentColor" viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.574-1.258 2.437-3.12 2.437-5.432 0-4.219-2.438-5.902-6.503-7.605z"/></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tutoriais com Tabs Interativas por Sistema Operativo -->
-    <section id="tutoriais" class="max-w-5xl mx-auto px-6 py-16 border-t border-slate-900">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <h2 class="text-3xl font-extrabold text-white mb-3">Ativação Passo a Passo em Vídeo</h2>
-            <p class="text-slate-400 text-sm">Selecione o seu sistema operativo e veja o vídeo de 20 segundos para introduzir a sua API Key:</p>
-        </div>
-
-        <!-- Seletor de Tabs -->
-        <div class="flex justify-center space-x-3 mb-8">
-            <button onclick="trocarTab('ios')" id="tab-ios" class="tab-btn active bg-emerald-500 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-xs transition">📱 iOS (iPhone)</button>
-            <button onclick="trocarTab('android')" id="tab-android" class="tab-btn bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold px-6 py-2.5 rounded-xl text-xs transition">🤖 Android</button>
-            <button onclick="trocarTab('windows')" id="tab-windows" class="tab-btn bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold px-6 py-2.5 rounded-xl text-xs transition">💻 Windows / PC</button>
-        </div>
-
-        <!-- Conteúdo das Tabs -->
-        <div class="glass-card p-6 md:p-8 rounded-3xl border border-slate-800 max-w-3xl mx-auto">
-            <!-- iOS Tab -->
-            <div id="content-ios" class="tab-content">
-                <h3 class="text-lg font-bold text-white mb-2">Configuração no iOS (Atalhos)</h3>
-                <p class="text-xs text-slate-400 mb-4">Veja onde colar a sua chave de acesso no aplicativo Atalhos do iPhone:</p>
-                <div class="aspect-video rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 mb-4">
-                    <video controls class="w-full h-full object-cover">
-                        <source src="ios-tutorial.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-
-            <!-- Android Tab -->
-            <div id="content-android" class="tab-content hidden">
-                <h3 class="text-lg font-bold text-white mb-2">Configuração no Android (MacroDroid)</h3>
-                <p class="text-xs text-slate-400 mb-4">Como introduzir a variável global de autenticação no seu smartphone Android:</p>
-                <div class="aspect-video rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 mb-4">
-                    <video controls class="w-full h-full object-cover">
-                        <source src="android-tutorial.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-
-            <!-- Windows Tab -->
-            <div id="content-windows" class="tab-content hidden">
-                <h3 class="text-lg font-bold text-white mb-2">Configuração no Windows (PowerShell)</h3>
-                <p class="text-xs text-slate-400 mb-4">Definição das variáveis de ambiente de utilizador e agendador de tarefas:</p>
-                <div class="aspect-video rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 mb-4">
-                    <video controls class="w-full h-full object-cover">
-                        <source src="windows-tutorial.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500">
-        Valens AI &copy; 2026 &bull; Soluções de Automação e Inteligência Artificial para PMEs
-    </footer>
-
-    <!-- Lógica de Cálculo e Integração com Stripe -->
-    <script>
-        function atualizarLógicaValores() {
-            const checkboxes = document.querySelectorAll('.modulo-item:checked');
-            let total = 0;
-            
-            checkboxes.forEach(cb => {
-                total += parseInt(cb.value);
-            });
-
-            const badge = document.getElementById('badgeDesconto');
-            if (checkboxes.length === 4) {
-                total = 400;
-                badge.classList.remove('hidden');
-            } else {
-                badge.classList.add('hidden');
-            }
-
-            document.getElementById('valorTotal').innerText = total + '€';
-        }
-
-        function iniciarCheckoutStripe() {
-            const total = document.getElementById('valorTotal').innerText;
-            // Substitua esta URL pelo seu Payment Link real criado no Dashboard do Stripe
-            const stripePaymentUrl = "https://buy.stripe.com/SEU_LINK_AQUI"; 
-            
-            alert('A redirecionar para o Checkout Seguro da Valens AI no Stripe (' + total + ')...');
-            // window.location.href = stripePaymentUrl;
-        }
-
-        function trocarTab(sistema) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-            document.querySelectorAll('.tab-btn').forEach(el => {
-                el.classList.remove('bg-emerald-500', 'text-slate-950');
-                el.classList.add('bg-slate-900', 'text-slate-300');
-            });
-
-            document.getElementById('content-' + sistema).classList.remove('hidden');
-            const activeBtn = document.getElementById('tab-' + sistema);
-            activeBtn.classList.remove('bg-slate-900', 'text-slate-300');
-            activeBtn.classList.add('bg-emerald-500', 'text-slate-950');
-        }
-
-        // Script de Proteção Anti-Cópia
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        document.addEventListener('keydown', function(event) {
-            if (
-                event.key === 'F12' || 
-                (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'C' || event.key === 'J')) || 
-                (event.ctrlKey && event.key === 'U')
-            ) {
-                event.preventDefault();
-                return false;
-            }
-        });
-        document.addEventListener('selectstart', event => event.preventDefault());
-    </script>
-</body>
-</html>
+            <span>IA, Automação & Consultoria IT &bull
