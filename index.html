@@ -20,11 +20,11 @@
                 <span class="text-2xl font-extrabold tracking-tight text-white">VALENS <span class="text-emerald-400">AI</span></span>
             </div>
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
-                <a href="#configurador" class="hover:text-emerald-400 transition">Montar Solução</a>
+                <a href="#configurador" class="hover:text-emerald-400 transition">Calculadora Modular</a>
                 <a href="#tutoriais" class="hover:text-emerald-400 transition">Tutoriais em Vídeo</a>
             </div>
             <a href="#configurador" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-2.5 rounded-xl transition shadow-lg shadow-emerald-500/20 text-sm">
-                Começar Agora
+                Montar Solução
             </a>
         </div>
     </header>
@@ -33,195 +33,57 @@
     <section class="relative max-w-7xl mx-auto px-6 pt-24 pb-16 text-center">
         <div class="inline-flex items-center space-x-2 bg-slate-900 border border-slate-800 px-4 py-2 rounded-full text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-8">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>Atendimento 24/7 &bull; Zero Taxa de Instalação &bull; Privacidade Total</span>
+            <span>Atendimento 24/7 &bull; Zero Taxa de Instalação &bull; Segurança de Dados</span>
         </div>
         
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight mb-6">
-            Automatize o seu negócio com <span class="text-emerald-400">Inteligência Artificial</span>.
+            Agentes de IA de Alta Performance para o seu Negócio.
         </h1>
         
         <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Escolha os módulos ideais para o seu estabelecimento, pague com facilidade e configure a sua IA através dos nossos vídeos passo a passo.
+            Aumente a conversão de vendas, qualifique potenciais clientes e responda instantaneamente em todos os canais digitais.
         </p>
     </section>
 
-    <!-- Configurador Modular & Preços -->
+    <!-- Configurador Modular com Novos Preços -->
     <section id="configurador" class="max-w-5xl mx-auto px-6 py-12">
         <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl backdrop-blur-sm">
             
             <div class="text-center max-w-xl mx-auto mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2">Configure o seu Plano Modular</h2>
-                <p class="text-sm text-slate-400">Pague apenas pelo que utilizar. Cancele ou altere os serviços quando quiser.</p>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2">Selecione os seus Módulos</h2>
+                <p class="text-sm text-slate-400">Escolha os serviços necessários e adapte a sua automação à medida.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-5 mb-10">
-                <!-- Módulo 1 -->
+                <!-- Módulo 1: WhatsApp -->
                 <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500/60 transition">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="59" checked onchange="calcularTotal()">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="149" checked onchange="calcularTotal()">
                     <div>
                         <span class="font-bold text-base block text-white group-hover:text-emerald-400 transition">Agente WhatsApp 24/7</span>
-                        <span class="text-xs text-slate-400 mt-1 block">Atendimento imediato, tira dúvidas e envia tabelas de preços a qualquer hora.</span>
-                        <span class="text-emerald-400 font-bold text-sm block mt-3">59€ / mês</span>
+                        <span class="text-xs text-slate-400 mt-1 block">Atendimento imediato, resposta a dúvidas, tabelas de preços e envio de catálogo.</span>
+                        <span class="text-emerald-400 font-bold text-sm block mt-3">149€ / mês</span>
                     </div>
                 </label>
 
-                <!-- Módulo 2 -->
+                <!-- Módulo 2: Instagram Direct -->
                 <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500/60 transition">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="39" checked onchange="calcularTotal()">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="99" checked onchange="calcularTotal()">
                     <div>
                         <span class="font-bold text-base block text-white group-hover:text-emerald-400 transition">Automação de Instagram Direct</span>
-                        <span class="text-xs text-slate-400 mt-1 block">Converte comentários em publicações e responde a mensagens directas instantaneamente.</span>
-                        <span class="text-emerald-400 font-bold text-sm block mt-3">39€ / mês</span>
+                        <span class="text-xs text-slate-400 mt-1 block">Captura de leads em comentários de posts e respostas imediatas por Direct.</span>
+                        <span class="text-emerald-400 font-bold text-sm block mt-3">99€ / mês</span>
                     </div>
                 </label>
 
-                <!-- Módulo 3 -->
+                <!-- Módulo 3: Qualificação de Leads -->
                 <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500/60 transition">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="29" onchange="calcularTotal()">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="129" onchange="calcularTotal()">
                     <div>
-                        <span class="font-bold text-base block text-white group-hover:text-emerald-400 transition">Agendamento Automático</span>
-                        <span class="text-xs text-slate-400 mt-1 block">Marcação de serviços e horários sincronizada diretamente com o seu calendário.</span>
-                        <span class="text-emerald-400 font-bold text-sm block mt-3">29€ / mês</span>
+                        <span class="font-bold text-base block text-white group-hover:text-emerald-400 transition">Qualificação Avançada de Leads</span>
+                        <span class="text-xs text-slate-400 mt-1 block">Filtro inteligente de orçamento, intenção de compra e pesquisa em base de dados.</span>
+                        <span class="text-emerald-400 font-bold text-sm block mt-3">129€ / mês</span>
                     </div>
                 </label>
 
-                <!-- Módulo 4 -->
-                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500/60 transition">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="39" onchange="calcularTotal()">
-                    <div>
-                        <span class="font-bold text-base block text-white group-hover:text-emerald-400 transition">Qualificação de Leads</span>
-                        <span class="text-xs text-slate-400 mt-1 block">Filtro inteligente de potenciais clientes e reengajamento comercial.</span>
-                        <span class="text-emerald-400 font-bold text-sm block mt-3">39€ / mês</span>
-                    </div>
-                </label>
-            </div>
-
-            <!-- Resumo e Pagamento Wise -->
-            <div class="border-t border-slate-800 pt-8">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-950 p-6 rounded-2xl border border-slate-800">
-                    <div>
-                        <div class="text-xs text-slate-400 mb-1">Total do Plano Selecionado:</div>
-                        <div class="flex items-baseline space-x-2">
-                            <span class="text-4xl font-extrabold text-white" id="valorTotal">98€</span>
-                            <span class="text-slate-400 text-sm">/ mês</span>
-                        </div>
-                        <span class="text-[11px] text-emerald-400 block mt-1">✓ Setup Grátis &bull; Acesso imediato após validação</span>
-                    </div>
-
-                    <button onclick="gerarReferenciaWise()" class="w-full md:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl transition text-base shadow-lg shadow-emerald-500/20">
-                        Gerar Pagamento Wise & Obter Acesso
-                    </button>
-                </div>
-
-                <!-- Painel de Referência Wise Gerada -->
-                <div id="boxReferencia" class="hidden mt-6 p-6 bg-slate-950 border border-emerald-500/30 rounded-2xl">
-                    <h3 class="font-bold text-emerald-400 text-base mb-2">Instruções de Pagamento via Wise</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
-                        Efetue a transferência do valor exato no app da Wise utilizando o código de referência abaixo. O seu acesso e API Key serão libertados automaticamente.
-                    </p>
-                    <div class="grid md:grid-cols-2 gap-4 text-xs bg-slate-900 p-4 rounded-xl font-mono text-slate-200">
-                        <div><strong>Valor a Pagar:</strong> <span id="wiseValor">98€</span></div>
-                        <div><strong>Referência Única:</strong> <span id="wiseRef" class="text-emerald-400 font-bold">VAL-7482-PT</span></div>
-                        <div><strong>Beneficiário:</strong> Valens AI Solutions</div>
-                        <div><strong>E-mail Wise:</strong> pagamentos@valens.ai</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tutoriais com Vídeos Reais Passo a Passo -->
-    <section id="tutoriais" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-900">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold mb-3 tracking-tight">Passo a Passo em Vídeo</h2>
-            <p class="text-slate-400 text-sm">Assista aos tutoriais práticos e veja exatamente onde inserir a API Key no seu dispositivo:</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- iOS -->
-            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
-                <div class="flex items-center space-x-3 mb-4">
-                    <span class="p-2.5 rounded-xl bg-slate-950 text-emerald-400 font-bold text-lg">📱</span>
-                    <div>
-                        <h3 class="font-bold text-white">iOS / iPhone</h3>
-                        <span class="text-xs text-slate-400">Atalhos da Apple</span>
-                    </div>
-                </div>
-                <!-- Vídeo Real Integrado -->
-                <div class="aspect-video rounded-xl overflow-hidden border border-slate-800 mb-4 bg-slate-950">
-                    <video controls class="w-full h-full object-cover" poster="">
-                        <source src="ios-tutorial.mp4" type="video/mp4">
-                        O seu navegador não suporta vídeos.
-                    </video>
-                </div>
-                <p class="text-xs text-slate-400 leading-relaxed">Como configurar atalhos inteligentes e inserir a chave de segurança no ecossistema Apple.</p>
-            </div>
-
-            <!-- Android -->
-            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
-                <div class="flex items-center space-x-3 mb-4">
-                    <span class="p-2.5 rounded-xl bg-slate-950 text-emerald-400 font-bold text-lg">🤖</span>
-                    <div>
-                        <h3 class="font-bold text-white">Android</h3>
-                        <span class="text-xs text-slate-400">MacroDroid / Tasker</span>
-                    </div>
-                </div>
-                <!-- Vídeo Real Integrado -->
-                <div class="aspect-video rounded-xl overflow-hidden border border-slate-800 mb-4 bg-slate-950">
-                    <video controls class="w-full h-full object-cover">
-                        <source src="android-tutorial.mp4" type="video/mp4">
-                        O seu navegador não suporta vídeos.
-                    </video>
-                </div>
-                <p class="text-xs text-slate-400 leading-relaxed">Definição de variáveis globais e automação de requisições HTTP em segundo plano.</p>
-            </div>
-
-            <!-- Windows -->
-            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
-                <div class="flex items-center space-x-3 mb-4">
-                    <span class="p-2.5 rounded-xl bg-slate-950 text-emerald-400 font-bold text-lg">💻</span>
-                    <div>
-                        <h3 class="font-bold text-white">Windows / PC</h3>
-                        <span class="text-xs text-slate-400">PowerShell & Tarefas</span>
-                    </div>
-                </div>
-                <!-- Vídeo Real Integrado -->
-                <div class="aspect-video rounded-xl overflow-hidden border border-slate-800 mb-4 bg-slate-950">
-                    <video controls class="w-full h-full object-cover">
-                        <source src="windows-tutorial.mp4" type="video/mp4">
-                        O seu navegador não suporta vídeos.
-                    </video>
-                </div>
-                <p class="text-xs text-slate-400 leading-relaxed">Configuração de variáveis de ambiente no Windows e agendamento de scripts locais.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500">
-        Valens AI &copy; 2026 &bull; Soluções de Automação Avançada para o Mercado Europeu
-    </footer>
-
-    <!-- Script Interativo -->
-    <script>
-        function calcularTotal() {
-            const checkboxes = document.querySelectorAll('.modulo-item:checked');
-            let total = 0;
-            checkboxes.forEach(cb => {
-                total += parseInt(cb.value);
-            });
-            document.getElementById('valorTotal').innerText = total + '€';
-            document.getElementById('wiseValor').innerText = total + '€';
-        }
-
-        function gerarReferenciaWise() {
-            const total = document.getElementById('valorTotal').innerText;
-            const refAleatoria = 'VAL-' + Math.floor(1000 + Math.random() * 9000) + '-PT';
-            
-            document.getElementById('wiseValor').innerText = total;
-            document.getElementById('wiseRef').innerText = refAleatoria;
-            document.getElementById('boxReferencia').classList.remove('hidden');
-        }
-    </script>
-</body>
-</html>
+                <!-- Módulo 4: Agendamento -->
+                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-50
