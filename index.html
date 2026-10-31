@@ -86,7 +86,7 @@
 
         <div class="inline-flex items-center space-x-2 bg-slate-900/90 border border-emerald-500/30 px-4 py-2 rounded-full text-emerald-400 text-xs font-bold uppercase tracking-widest mb-8 shadow-inner">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>IA, Automação & Consultoria IT &bull; Isenção de Taxa no Pack Completo</span>
+            <span>IA, Automação & Consultoria IT &bull; Isenção de Taxa no Plano Enterprise</span>
         </div>
         
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight mb-6 text-white">
@@ -176,21 +176,21 @@
         <div class="text-center max-w-2xl mx-auto mb-16">
             <span class="text-emerald-400 font-extrabold text-xs uppercase tracking-widest block mb-2">Soluções Recomendadas</span>
             <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Escolha o Plano Ideal para a sua Empresa</h2>
-            <p class="text-sm text-slate-400 mt-3">Pacotes fechados com a melhor relação de valor para o seu negócio.</p>
+            <p class="text-sm text-slate-400 mt-3">Taxa única de 49€ aplicada no 1º pagamento para ativação dos serviços nos planos Start e Profissional.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8 items-stretch">
             
-            <!-- PLANO 1: ESSENCIAL -->
+            <!-- PLANO 1: START -->
             <div class="glass-card p-8 border border-slate-800 flex flex-col justify-between relative hover:border-emerald-500/50 transition">
                 <div>
                     <div class="text-emerald-400 font-extrabold text-xs uppercase tracking-widest mb-2">Plano Start</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Agente WhatsApp 24/7</h3>
-                    <div class="flex items-baseline space-x-1 mb-2">
-                        <span class="text-4xl font-black text-white">149€</span>
-                        <span class="text-xs text-slate-400">/ mês</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Agente WhatsApp 24/7</h3>
+                    <div class="flex items-baseline space-x-1 mb-1">
+                        <span class="text-4xl font-black text-white">198€</span>
+                        <span class="text-xs text-slate-400">/ 1º pagamento</span>
                     </div>
-                    <div class="text-[11px] text-amber-400 font-semibold mb-6">+ 49€ taxa única de ativação e hospedagem</div>
+                    <div class="text-[11px] text-amber-400 font-semibold mb-6">(149€/mês + 49€ taxa única de ativação)</div>
                     <p class="text-xs text-slate-300 leading-relaxed mb-6">
                         Para negócios locais que querem automatizar o atendimento imediato no WhatsApp sem perder nenhuma oportunidade.
                     </p>
@@ -209,24 +209,21 @@
                         </li>
                     </ul>
                 </div>
-                <a href="#configurador" class="w-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold py-3 rounded-xl text-center text-xs transition">
-                    Selecionar Plano Start
-                </a>
+                <button onclick="selecionarPlanoPredefinido('start')" class="w-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold py-3 rounded-xl text-center text-xs transition">
+                    Selecionar Plano Start (198€)
+                </button>
             </div>
 
-            <!-- PLANO 2: PACK COMPLETO (DESTAQUE COM ISENÇÃO DE TAXA) -->
-            <div class="glass-card p-8 border-2 border-emerald-500 flex flex-col justify-between relative glow-effect transform md:-translate-y-4">
-                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 font-extrabold text-[10px] px-3 py-1 rounded-full uppercase tracking-widest">
-                    Sem Taxa de Ativação (Poupa 115€)
-                </div>
+            <!-- PLANO 2: PROFISSIONAL (PACK COMPLETO IA) -->
+            <div class="glass-card p-8 border border-slate-800 flex flex-col justify-between relative hover:border-emerald-500/50 transition">
                 <div>
                     <div class="text-emerald-400 font-extrabold text-xs uppercase tracking-widest mb-2">Plano Profissional</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Pack Completo IA Omnicanal</h3>
-                    <div class="flex items-baseline space-x-1 mb-2">
-                        <span class="text-4xl font-black text-white">400€</span>
-                        <span class="text-xs text-slate-400">/ mês</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Pack Completo IA Omnicanal</h3>
+                    <div class="flex items-baseline space-x-1 mb-1">
+                        <span class="text-4xl font-black text-white">449€</span>
+                        <span class="text-xs text-slate-400">/ 1º pagamento</span>
                     </div>
-                    <div class="text-[11px] text-emerald-400 font-bold mb-6">✓ Taxa de ativação 0€ (OFERTA INCLUÍDA)</div>
+                    <div class="text-[11px] text-amber-400 font-semibold mb-6">(400€/mês + 49€ taxa única de ativação)</div>
                     <p class="text-xs text-slate-300 leading-relaxed mb-6">
                         Ecossistema completo com todos os 4 módulos ativados. Agendamento, qualificação e automação total de WhatsApp e Instagram.
                     </p>
@@ -243,26 +240,30 @@
                             <span class="text-emerald-400 font-bold">✓</span>
                             <span>Agendamento Automático (Google Agenda)</span>
                         </li>
-                        <li class="flex items-center space-x-2 text-emerald-400 font-bold">
-                            <span>★ Ativação e Hospedagem 100% Grátis</span>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-emerald-400 font-bold">✓</span>
+                            <span>Desconto de 66€ nos módulos base</span>
                         </li>
                     </ul>
                 </div>
-                <a href="#configurador" class="w-full bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold py-3 rounded-xl text-center text-xs transition shadow-lg shadow-emerald-500/25">
-                    Garantir Pack Completo
-                </a>
+                <button onclick="selecionarPlanoPredefinido('profissional')" class="w-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold py-3 rounded-xl text-center text-xs transition">
+                    Selecionar Profissional (449€)
+                </button>
             </div>
 
-            <!-- PLANO 3: ENTERPRISE -->
-            <div class="glass-card p-8 border border-slate-800 flex flex-col justify-between relative hover:border-emerald-500/50 transition">
+            <!-- PLANO 3: ENTERPRISE (DESTAQUE COM ISENÇÃO TOTAL DE TAXA DE ATIVAÇÃO) -->
+            <div class="glass-card p-8 border-2 border-teal-400 flex flex-col justify-between relative glow-effect transform md:-translate-y-4">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-teal-400 text-slate-950 font-extrabold text-[10px] px-3 py-1 rounded-full uppercase tracking-widest">
+                    Isenção Total da Taxa de Ativação (Taxa 0€)
+                </div>
                 <div>
                     <div class="text-teal-300 font-extrabold text-xs uppercase tracking-widest mb-2">Plano Enterprise</div>
-                    <h3 class="text-xl font-bold text-white mb-4">IA + Tráfego Pago & Consultoria</h3>
-                    <div class="flex items-baseline space-x-1 mb-2">
+                    <h3 class="text-xl font-bold text-white mb-2">IA + Tráfego Pago & Consultoria</h3>
+                    <div class="flex items-baseline space-x-1 mb-1">
                         <span class="text-4xl font-black text-white">748€</span>
                         <span class="text-xs text-slate-400">/ total inicial</span>
                     </div>
-                    <div class="text-[11px] text-teal-300 font-semibold mb-6">✓ Inclui consultoria de equipa e gestão de anúncios</div>
+                    <div class="text-[11px] text-teal-300 font-bold mb-6">✓ Taxa de Ativação de 49€ 100% Grátis (OFERTA)</div>
                     <p class="text-xs text-slate-300 leading-relaxed mb-6">
                         Para empresas que procuram domínio total de mercado com anúncios nas redes sociais, posts automáticos e formação presencial/remota.
                     </p>
@@ -285,9 +286,9 @@
                         </li>
                     </ul>
                 </div>
-                <a href="#configurador" class="w-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold py-3 rounded-xl text-center text-xs transition">
-                    Selecionar Enterprise
-                </a>
+                <button onclick="selecionarPlanoPredefinido('enterprise')" class="w-full bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold py-3 rounded-xl text-center text-xs transition shadow-lg shadow-emerald-500/25">
+                    Garantir Enterprise (748€)
+                </button>
             </div>
 
         </div>
@@ -342,7 +343,7 @@
             
             <div class="text-center max-w-xl mx-auto mb-10">
                 <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2 text-white">Calculadora & Plano Modular</h2>
-                <p class="text-sm text-slate-400">Monte a sua combinação. Selecione os 4 módulos base para garantir isenção total da taxa de ativação.</p>
+                <p class="text-sm text-slate-400">Monte a sua combinação. Contrate a estrutura Enterprise completa para garantir isenção total da taxa de ativação de 49€.</p>
             </div>
 
             <!-- MÓDULOS DE AUTOMAÇÃO E IA -->
@@ -350,7 +351,7 @@
                 <h3 class="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-4">1. Módulos de Automação & Agentes IA 24/7</h3>
                 <div class="grid md:grid-cols-2 gap-5">
                     <label class="group flex items-start space-x-4 p-5 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
-                        <input type="checkbox" class="modulo-item modulo-base mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="149" checked onchange="atualizarLógicaValores()">
+                        <input type="checkbox" id="mod-wp" class="modulo-item modulo-base mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="149" checked onchange="atualizarLógicaValores()">
                         <div class="w-full">
                             <div class="flex justify-between items-center">
                                 <span class="font-bold text-sm text-white group-hover:text-emerald-400 transition">Agente WhatsApp 24/7</span>
@@ -361,7 +362,7 @@
                     </label>
 
                     <label class="group flex items-start space-x-4 p-5 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
-                        <input type="checkbox" class="modulo-item modulo-base mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="99" checked onchange="atualizarLógicaValores()">
+                        <input type="checkbox" id="mod-ig" class="modulo-item modulo-base mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="99" checked onchange="atualizarLógicaValores()">
                         <div class="w-full">
                             <div class="flex justify-between items-center">
                                 <span class="font-bold text-sm text-white group-hover:text-emerald-400 transition">Automação Instagram Direct</span>
@@ -372,7 +373,7 @@
                     </label>
 
                     <label class="group flex items-start space-x-4 p-5 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
-                        <input type="checkbox" class="modulo-item modulo-base mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="129" onchange="atualizarLógicaValores()">
+                        <input type="checkbox" id="mod-qual" class="modulo-item modulo-base mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="129" onchange="atualizarLógicaValores()">
                         <div class="w-full">
                             <div class="flex justify-between items-center">
                                 <span class="font-bold text-sm text-white group-hover:text-emerald-400 transition">Qualificação de Leads</span>
@@ -383,7 +384,7 @@
                     </label>
 
                     <label class="group flex items-start space-x-4 p-5 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
-                        <input type="checkbox" class="modulo-item modulo-base mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="89" onchange="atualizarLógicaValores()">
+                        <input type="checkbox" id="mod-agenda" class="modulo-item modulo-base mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="89" onchange="atualizarLógicaValores()">
                         <div class="w-full">
                             <div class="flex justify-between items-center">
                                 <span class="font-bold text-sm text-white group-hover:text-emerald-400 transition">Agendamento Automático</span>
@@ -403,7 +404,7 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-5">
                     <label class="group flex items-start space-x-4 p-5 rounded-2xl bg-slate-900/60 border border-teal-500/30 cursor-pointer hover:border-teal-400 transition-all hover:scale-[1.01]">
-                        <input type="checkbox" class="modulo-item modulo-upsell mt-1 w-5 h-5 accent-teal-400 rounded cursor-pointer" value="199" onchange="atualizarLógicaValores()">
+                        <input type="checkbox" id="upsell-ads" class="modulo-item modulo-upsell mt-1 w-5 h-5 accent-teal-400 rounded cursor-pointer" value="199" onchange="atualizarLógicaValores()">
                         <div class="w-full">
                             <div class="flex justify-between items-center">
                                 <span class="font-bold text-sm text-white group-hover:text-teal-300 transition">Gestão de Anúncios (Meta & Google Ads)</span>
@@ -414,7 +415,7 @@
                     </label>
 
                     <label class="group flex items-start space-x-4 p-5 rounded-2xl bg-slate-900/60 border border-teal-500/30 cursor-pointer hover:border-teal-400 transition-all hover:scale-[1.01]">
-                        <input type="checkbox" class="modulo-item modulo-upsell mt-1 w-5 h-5 accent-teal-400 rounded cursor-pointer" value="149" onchange="atualizarLógicaValores()">
+                        <input type="checkbox" id="upsell-posts" class="modulo-item modulo-upsell mt-1 w-5 h-5 accent-teal-400 rounded cursor-pointer" value="149" onchange="atualizarLógicaValores()">
                         <div class="w-full">
                             <div class="flex justify-between items-center">
                                 <span class="font-bold text-sm text-white group-hover:text-teal-300 transition">Criação de Posts & Criativos IA</span>
@@ -425,7 +426,7 @@
                     </label>
 
                     <label class="group flex items-start space-x-4 p-5 rounded-2xl bg-slate-900/60 border border-teal-500/30 cursor-pointer hover:border-teal-400 transition-all hover:scale-[1.01]">
-                        <input type="checkbox" class="modulo-item modulo-upsell mt-1 w-5 h-5 accent-teal-400 rounded cursor-pointer" value="150" onchange="atualizarLógicaValores()">
+                        <input type="checkbox" id="upsell-consult" class="modulo-item modulo-upsell mt-1 w-5 h-5 accent-teal-400 rounded cursor-pointer" value="150" onchange="atualizarLógicaValores()">
                         <div class="w-full">
                             <div class="flex justify-between items-center">
                                 <span class="font-bold text-sm text-white group-hover:text-teal-300 transition">Consultoria & Formação de Equipa</span>
@@ -436,7 +437,7 @@
                     </label>
 
                     <label class="group flex items-start space-x-4 p-5 rounded-2xl bg-slate-900/60 border border-teal-500/30 cursor-pointer hover:border-teal-400 transition-all hover:scale-[1.01]">
-                        <input type="checkbox" class="modulo-item modulo-upsell mt-1 w-5 h-5 accent-teal-400 rounded cursor-pointer" value="120" onchange="atualizarLógicaValores()">
+                        <input type="checkbox" id="upsell-pc" class="modulo-item modulo-upsell mt-1 w-5 h-5 accent-teal-400 rounded cursor-pointer" value="120" onchange="atualizarLógicaValores()">
                         <div class="w-full">
                             <div class="flex justify-between items-center">
                                 <span class="font-bold text-sm text-white group-hover:text-teal-300 transition">Revisão, Reparo & Upgrade de Portáteis</span>
@@ -448,13 +449,13 @@
                 </div>
             </div>
 
-            <!-- Resumo Financeiro com Exibição da Taxa de Ativação -->
+            <!-- Resumo Financeiro com Exibição Dinâmica da Taxa de Ativação -->
             <div class="border-t border-slate-800/80 pt-8">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-950/90 p-6 rounded-2xl border border-slate-800 shadow-inner">
                     <div>
                         <div class="flex items-center space-x-2">
                             <span class="text-xs text-slate-400 font-medium">Investimento 1º Pagamento:</span>
-                            <span id="badgeDesconto" class="hidden text-[10px] bg-emerald-500/20 text-emerald-400 px-2.5 py-0.5 rounded-full font-bold">Pack Completo (-66€)</span>
+                            <span id="badgeDesconto" class="hidden text-[10px] bg-emerald-500/20 text-emerald-400 px-2.5 py-0.5 rounded-full font-bold">Pack Completo IA (-66€)</span>
                         </div>
                         <div class="flex items-baseline space-x-2 mt-1">
                             <span class="text-4xl font-black text-white tracking-tight" id="valorTotal">297€</span>
@@ -463,8 +464,8 @@
                         <div id="statusTaxaAtivacao" class="mt-1 text-[11px] font-semibold text-amber-400">
                             + 49€ taxa única de ativação e hospedagem de serviços
                         </div>
-                        <div id="badgeImplementacao" class="hidden mt-1 text-[11px] text-emerald-400 font-bold">
-                            ✓ Isenção Total da Taxa de Ativação (Oferta Pack Completo)
+                        <div id="badgeImplementacao" class="hidden mt-1 text-[11px] text-teal-300 font-bold">
+                            ✓ Isenção Total da Taxa de Ativação (Oferta Plano Enterprise)
                         </div>
                         <span class="text-[11px] text-slate-400 block mt-0.5">Zero fidelização &bull; Checkout seguro via Stripe</span>
                     </div>
@@ -533,7 +534,7 @@
         Valens AI Solutions &copy; 2026 &bull; Automação, IA, Consultoria & Suporte Tecnológico para PMEs
     </footer>
 
-    <!-- Lógica de Cálculo com Ativação Automática de Taxa de 49€ -->
+    <!-- Lógica de Cálculo com Isenção Exclusiva para o Plano Enterprise -->
     <script>
         function atualizarLógicaValores() {
             const modulosBase = document.querySelectorAll('.modulo-base:checked');
@@ -550,21 +551,59 @@
             const badgeImplementacao = document.getElementById('badgeImplementacao');
             const statusTaxaAtivacao = document.getElementById('statusTaxaAtivacao');
 
-            // Regra do Pack Completo: Se selecionar os 4 módulos base, zera a taxa de 49€ e aplica o desconto
+            // Aplica desconto de 66€ nos módulos base se os 4 estiverem selecionados
             if (modulosBase.length === 4) {
                 totalBase = 400;
-                taxaAtivacao = 0;
                 badgeDesconto.classList.remove('hidden');
+            } else {
+                badgeDesconto.classList.add('hidden');
+            }
+
+            // Regra da Taxa de 49€: Isenção EXCLUSIVA para o Plano Enterprise (4 Módulos IA + Anúncios + Posts + Consultoria = 748€)
+            const isEnterprise = (modulosBase.length === 4) && 
+                                 document.getElementById('upsell-ads').checked && 
+                                 document.getElementById('upsell-posts').checked && 
+                                 document.getElementById('upsell-consult').checked;
+
+            if (isEnterprise) {
+                taxaAtivacao = 0;
                 badgeImplementacao.classList.remove('hidden');
                 statusTaxaAtivacao.classList.add('hidden');
             } else {
-                badgeDesconto.classList.add('hidden');
+                taxaAtivacao = 49;
                 badgeImplementacao.classList.add('hidden');
                 statusTaxaAtivacao.classList.remove('hidden');
             }
 
             const valorFinal = totalBase + totalUpsell + taxaAtivacao;
             document.getElementById('valorTotal').innerText = valorFinal + '€';
+        }
+
+        function selecionarPlanoPredefinido(tipo) {
+            // Desmarca todos os módulos primeiro
+            document.querySelectorAll('.modulo-item').forEach(cb => cb.checked = false);
+
+            if (tipo === 'start') {
+                document.getElementById('mod-wp').checked = true;
+            } else if (tipo === 'profissional') {
+                document.getElementById('mod-wp').checked = true;
+                document.getElementById('mod-ig').checked = true;
+                document.getElementById('mod-qual').checked = true;
+                document.getElementById('mod-agenda').checked = true;
+            } else if (tipo === 'enterprise') {
+                document.getElementById('mod-wp').checked = true;
+                document.getElementById('mod-ig').checked = true;
+                document.getElementById('mod-qual').checked = true;
+                document.getElementById('mod-agenda').checked = true;
+                document.getElementById('upsell-ads').checked = true;
+                document.getElementById('upsell-posts').checked = true;
+                document.getElementById('upsell-consult').checked = true;
+            }
+
+            atualizarLógicaValores();
+            
+            // Faz scroll suave até à calculadora para mostrar o resultado
+            document.getElementById('configurador').scrollIntoView({ behavior: 'smooth' });
         }
 
         function iniciarCheckoutStripe() {
