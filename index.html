@@ -3,87 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valens AI | Plataforma Modular de Automação & IA</title>
+    <title>Valens AI | Automação & Agentes de IA 24/7</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-effect {
+            box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.25);
+        }
+        .bg-grid {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
     </style>
 </head>
-<body class="bg-[#030712] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
+<body class="bg-[#030712] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 bg-grid">
 
     <!-- Header / Navbar -->
-    <header class="border-b border-slate-800/80 bg-[#030712]/90 backdrop-blur-md sticky top-0 z-50">
+    <header class="border-b border-slate-800/80 bg-[#030712]/90 backdrop-blur-xl sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center font-black text-slate-950 text-xl shadow-lg shadow-emerald-500/20">V</div>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 via-emerald-500 to-teal-400 flex items-center justify-center font-black text-slate-950 text-xl shadow-lg shadow-emerald-500/30">V</div>
                 <span class="text-2xl font-extrabold tracking-tight text-white">VALENS <span class="text-emerald-400">AI</span></span>
             </div>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
-                <a href="#configurador" class="hover:text-emerald-400 transition">Calculadora Modular</a>
-                <a href="#tutoriais" class="hover:text-emerald-400 transition">Tutoriais em Vídeo</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-300">
+                <a href="#configurador" class="hover:text-emerald-400 transition">Calculadora</a>
+                <a href="#simulador" class="hover:text-emerald-400 transition">Simulador de ROI</a>
+                <a href="#tutoriais" class="hover:text-emerald-400 transition">Ativação & Tutoriais</a>
             </div>
-            <a href="#configurador" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-2.5 rounded-xl transition shadow-lg shadow-emerald-500/20 text-sm">
+            <a href="#configurador" class="bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-6 py-2.5 rounded-xl transition-all shadow-lg shadow-emerald-500/25 hover:scale-105 text-sm">
                 Montar Solução
             </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative max-w-7xl mx-auto px-6 pt-24 pb-16 text-center">
-        <div class="inline-flex items-center space-x-2 bg-slate-900 border border-slate-800 px-4 py-2 rounded-full text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-8">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>Atendimento 24/7 &bull; Zero Taxa de Instalação &bull; Segurança de Dados</span>
+    <!-- Hero Section com Efeito Radial Glow -->
+    <section class="relative max-w-7xl mx-auto px-6 pt-20 pb-16 text-center overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="inline-flex items-center space-x-2 bg-slate-900/90 border border-emerald-500/30 px-4 py-2 rounded-full text-emerald-400 text-xs font-bold uppercase tracking-widest mb-8 shadow-inner">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Atendimento 24/7 &bull; Zero Taxa de Instalação &bull; Conexão Local Segura</span>
         </div>
         
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight mb-6">
-            Agentes de IA de Alta Performance para o seu Negócio.
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight mb-6 text-white">
+            Transforme o seu atendimento em uma <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500">Máquina de Vendas</span>.
         </h1>
         
-        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Aumente a conversão de vendas, qualifique potenciais clientes e responda instantaneamente em todos os canais digitais.
+        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
+            Agentes inteligentes para WhatsApp e Instagram. Qualifique potenciais clientes, envie catálogos e feche agendamentos em segundos.
         </p>
+
+        <!-- Indicadores Rápidos -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-4 text-left">
+            <div class="glass-card p-4 rounded-2xl border border-slate-800">
+                <div class="text-2xl font-black text-emerald-400">&lt; 5 Seg.</div>
+                <div class="text-xs text-slate-400 font-medium">Tempo Médio de Resposta</div>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border border-slate-800">
+                <div class="text-2xl font-black text-emerald-400">24 / 7</div>
+                <div class="text-xs text-slate-400 font-medium">Operação Ininterrupta</div>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border border-slate-800">
+                <div class="text-2xl font-black text-emerald-400">100%</div>
+                <div class="text-xs text-slate-400 font-medium">Privacidade & Chaves Locais</div>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border border-slate-800">
+                <div class="text-2xl font-black text-emerald-400">0€</div>
+                <div class="text-xs text-slate-400 font-medium">Custo de Configuração</div>
+            </div>
+        </div>
     </section>
 
-    <!-- Configurador Modular com Novos Preços -->
+    <!-- Configurador Modular Dinâmico -->
     <section id="configurador" class="max-w-5xl mx-auto px-6 py-12">
-        <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl backdrop-blur-sm">
+        <div class="glass-card rounded-3xl p-8 md:p-12 shadow-2xl relative glow-effect border border-slate-800">
             
-            <div class="text-center max-w-xl mx-auto mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2">Selecione os seus Módulos</h2>
-                <p class="text-sm text-slate-400">Escolha os serviços necessários e adapte a sua automação à medida.</p>
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2 text-white">Monte o seu Plano Personalizado</h2>
+                <p class="text-sm text-slate-400">Ative apenas os módulos que o seu negócio precisa. Altere a qualquer momento.</p>
             </div>
 
+            <!-- Seleção de Módulos -->
             <div class="grid md:grid-cols-2 gap-5 mb-10">
-                <!-- Módulo 1: WhatsApp -->
-                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500/60 transition">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="149" checked onchange="calcularTotal()">
-                    <div>
-                        <span class="font-bold text-base block text-white group-hover:text-emerald-400 transition">Agente WhatsApp 24/7</span>
-                        <span class="text-xs text-slate-400 mt-1 block">Atendimento imediato, resposta a dúvidas, tabelas de preços e envio de catálogo.</span>
-                        <span class="text-emerald-400 font-bold text-sm block mt-3">149€ / mês</span>
+                <!-- Módulo 1 -->
+                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="149" checked onchange="atualizarLógicaValores()">
+                    <div class="w-full">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-base text-white group-hover:text-emerald-400 transition">Agente WhatsApp 24/7</span>
+                            <span class="text-emerald-400 font-extrabold text-sm">149€ /mês</span>
+                        </div>
+                        <span class="text-xs text-slate-400 mt-2 block leading-relaxed">Atendimento imediato, resposta a dúvidas frequentes, apresentação de preços e envio de catálogo.</span>
                     </div>
                 </label>
 
-                <!-- Módulo 2: Instagram Direct -->
-                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500/60 transition">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="99" checked onchange="calcularTotal()">
-                    <div>
-                        <span class="font-bold text-base block text-white group-hover:text-emerald-400 transition">Automação de Instagram Direct</span>
-                        <span class="text-xs text-slate-400 mt-1 block">Captura de leads em comentários de posts e respostas imediatas por Direct.</span>
-                        <span class="text-emerald-400 font-bold text-sm block mt-3">99€ / mês</span>
+                <!-- Módulo 2 -->
+                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="99" checked onchange="atualizarLógicaValores()">
+                    <div class="w-full">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-base text-white group-hover:text-emerald-400 transition">Automação Instagram Direct</span>
+                            <span class="text-emerald-400 font-extrabold text-sm">99€ /mês</span>
+                        </div>
+                        <span class="text-xs text-slate-400 mt-2 block leading-relaxed">Conversão automática de comentários em posts e respostas instantâneas no Direct.</span>
                     </div>
                 </label>
 
-                <!-- Módulo 3: Qualificação de Leads -->
-                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500/60 transition">
-                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded" value="129" onchange="calcularTotal()">
-                    <div>
-                        <span class="font-bold text-base block text-white group-hover:text-emerald-400 transition">Qualificação Avançada de Leads</span>
-                        <span class="text-xs text-slate-400 mt-1 block">Filtro inteligente de orçamento, intenção de compra e pesquisa em base de dados.</span>
-                        <span class="text-emerald-400 font-bold text-sm block mt-3">129€ / mês</span>
+                <!-- Módulo 3 -->
+                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="129" onchange="atualizarLógicaValores()">
+                    <div class="w-full">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-base text-white group-hover:text-emerald-400 transition">Qualificação de Leads</span>
+                            <span class="text-emerald-400 font-extrabold text-sm">129€ /mês</span>
+                        </div>
+                        <span class="text-xs text-slate-400 mt-2 block leading-relaxed">Filtro de intenção de compra, orçamento disponível e integração com bases de dados.</span>
                     </div>
                 </label>
 
-                <!-- Módulo 4: Agendamento -->
-                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-50
+                <!-- Módulo 4 -->
+                <label class="group flex items-start space-x-4 p-6 rounded-2xl bg-slate-950/80 border border-slate-800 cursor-pointer hover:border-emerald-500 transition-all hover:scale-[1.01]">
+                    <input type="checkbox" class="modulo-item mt-1 w-5 h-5 accent-emerald-500 rounded cursor-pointer" value="89" onchange="atualizarLógicaValores()">
+                    <div class="w-full">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-base text-white group-hover:text-emerald-400 transition">Agendamento Automático</span>
+                            <span class="text-emerald-400 font-extrabold text-sm">89€ /mês</span>
+                        </div>
+                        <span class="text-xs text-slate-400 mt-2 block leading-relaxed">Marcação e sincronização automática de horários diretamente no Google Agenda.</span>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Resumo Financeiro & Wise Checkout -->
+            <div class="border-t border-slate-800/80 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-950/90 p-6 rounded-2xl border border-slate-800 shadow-inner">
+                    <div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-xs text-slate-400 font-medium">Investimento Mensal:</span>
+                            <span id="badgeDesconto" class="hidden text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full font-bold">Pack Completo (-66€)</span>
+                        </div>
+                        <div class="flex items-baseline space-x-2 mt-1">
+                            <span class="text-4xl font-black text-white tracking-tight" id="valorTotal">248€</span>
+                            <span class="text-slate-400 text-sm font-medium">/ mês</span>
+                        </div>
+                        <span class="text-[11px] text-emerald-400 block mt-1 font-semibold">✓ Zero fidelização &bull; Instalação e Suporte Grátis</span>
+                    </div>
+
+                    <button onclick="gerarCheckoutWise()" class="w-full md:w-auto bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-8 py-4 rounded-xl transition-all text-base shadow-lg shadow-emerald-500/25 hover:scale-105">
+                        Gerar Pagamento Wise & Obter Acesso
+                    </button>
+                </div>
+
+                <!-- Painel Dinâmico de Transferência Wise -->
+                <div id="boxWiseCheckout" class="hidden mt-6 p-6 bg-slate-950 border border-emerald-500/40 rounded-2xl animate-fade-in shadow-2xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-extrabold text-emerald-400 text-base flex items-center space-x-2">
+                            <span>Instruções de Pagamento Wise</span>
+                        </h3>
+                        <span class="text-[11px] bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full font-mono">Status: A aguardar transferência</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Efetue a transferência exata na sua aplicação da <strong>Wise</strong> informando o código de referência abaixo para a liberação automática:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 text-xs bg-slate-900 p-4 rounded-xl font-mono border border-slate-800 text-slate-200 mb-4">
+                        <div><span class="text-slate-400">Valor Exato:</span> <strong id="wiseValor" class="text-white">248€</strong></div>
+                        <div class="flex items-center justify-between">
+                            <div><span class="text-slate-400">Referência:</span> <strong id="wiseRef" class="text-emerald-400">VAL-8921-PT</strong></div>
+                            <button onclick="copiarReferencia()" class="text-[10px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-1 rounded transition">Copiar</button>
+                        </div>
+                        <div><span class="text-slate-400">Beneficiário:</span> <strong class="text-white">Valens AI Solutions</strong></div>
+                        <div><span class="text-slate-400">E-mail Wise:</span> <strong class="text-white">pagamentos@valens.ai</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulador de ROI -->
+    <section id="simulador" class="max-w-5xl mx-auto px-6 py-12">
+        <div class="glass-card rounded-3xl p-8 border border-slate-800">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <span class="text-emerald-400 font-extrabold text-xs uppercase tracking-widest block mb-2">Simulador de Impacto</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">Quanto custa a falta de atendimento imediato?</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                        Em Portugal, mais de 40% das mensagens de potenciais clientes chegam fora do horário comercial. Sem resposta imediata, o cliente procura o concorrente.
+                    </p>
+                    <div class="space-y-3 text-xs">
+                        <div class="flex justify-between p-3 rounded-xl bg-slate-950 border border-slate-800">
+                            <span class="text-slate-400">Atendimento Humano Adicional:</span>
+                            <span class="text-rose-400 font-bold">+1.100€ /mês</span>
+                        </div>
+                        <div class="flex justify-between p-3 rounded-xl bg-slate-950 border border-slate-800">
+                            <span class="text-slate-400">Agente Valens AI 24/7:</span>
+                            <span class="text-emerald-400 font-bold">149€ /mês</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+                    <div class="text-xs text-slate-400 mb-2">Economia estimada para o seu negócio:</div>
+                    <div class="text-4xl font-black text-emerald-400 mb-1">~ 11.400€ /ano</div>
+                    <div class="text-[11px] text-slate-500 mb-6">+ Mais de 30 horas semanais salvas de atendimento repetitivo</div>
+                    <a href="#configurador" class="inline-block w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition text-xs">
+                        Começar Agora Sem Riscos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutoriais com Tabs Interativas por Sistema Operativo -->
+    <section id="tutoriais" class="max-w-5xl mx-auto px-6 py-16 border-t border-slate-900">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-extrabold text-white mb-3">Ativação Passo a Passo em Vídeo</h2>
+            <p class="text-slate-400 text-sm">Selecione o seu sistema operativo e veja o vídeo de 20 segundos para introduzir a sua API Key:</p>
+        </div>
+
+        <!-- Seletor de Tabs -->
+        <div class="flex justify-center space-x-3 mb-8">
+            <button onclick="trocarTab('ios')" id="tab-ios" class="tab-btn active bg-emerald-500 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-xs transition">📱 iOS (iPhone)</button>
+            <button onclick="trocarTab('android')" id="tab-android" class="tab-btn bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold px-6 py-2.5 rounded-xl text-xs transition">🤖 Android</button>
+            <button onclick="trocarTab('windows')" id="tab-windows" class="tab-btn bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold px-6 py-2.5 rounded-xl text-xs transition">💻 Windows / PC</button>
+        </div>
+
+        <!-- Conteúdo das Tabs -->
+        <div class="glass-card p-6 md:p-8 rounded-3xl border border-slate-800 max-w-3xl mx-auto">
+            <!-- iOS Tab -->
+            <div id="content-ios" class="tab-content">
+                <h3 class="text-lg font-bold text-white mb-2">Configuração no iOS (Atalhos)</h3>
+                <p class="text-xs text-slate-400 mb-4">Veja onde colar a sua chave de acesso no aplicativo Atalhos do iPhone:</p>
+                <div class="aspect-video rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 mb-4">
+                    <video controls class="w-full h-full object-cover">
+                        <source src="ios-tutorial.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <!-- Android Tab -->
+            <div id="content-android" class="tab-content hidden">
+                <h3 class="text-lg font-bold text-white mb-2">Configuração no Android (MacroDroid)</h3>
+                <p class="text-xs text-slate-400 mb-4">Como introduzir a variável global de autenticação no seu smartphone Android:</p>
+                <div class="aspect-video rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 mb-4">
+                    <video controls class="w-full h-full object-cover">
+                        <source src="android-tutorial.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <!-- Windows Tab -->
+            <div id="content-windows" class="tab-content hidden">
+                <h3 class="text-lg font-bold text-white mb-2">Configuração no Windows (PowerShell)</h3>
+                <p class="text-xs text-slate-400 mb-4">Definição das variáveis de ambiente de utilizador e agendador de tarefas:</p>
+                <div class="aspect-video rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 mb-4">
+                    <video controls class="w-full h-full object-cover">
+                        <source src="windows-tutorial.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500">
+        Valens AI &copy; 2026 &bull; Soluções de Automação e Inteligência Artificial para PMEs
+    </footer>
+
+    <!-- Lógica de Cálculo e Proteção JavaScript -->
+    <script>
+        // 1. Lógica do Calculador de Planos
+        function atualizarLógicaValores() {
+            const checkboxes = document.querySelectorAll('.modulo-item:checked');
+            let total = 0;
+            
+            checkboxes.forEach(cb => {
+                total += parseInt(cb.value);
+            });
+
+            // Se selecionar todos os 4 módulos, aplica o desconto do Pack Completo (400€ em vez de 466€)
+            const badge = document.getElementById('badgeDesconto');
+            if (checkboxes.length === 4) {
+                total = 400;
+                badge.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+            }
+
+            document.getElementById('valorTotal').innerText = total + '€';
+            document.getElementById('wiseValor').innerText = total + '€';
+        }
+
+        function gerarCheckoutWise() {
+            const total = document.getElementById('valorTotal').innerText;
+            const refAleatoria = 'VAL-' + Math.floor(1000 + Math.random() * 9000) + '-PT';
+            
+            document.getElementById('wiseValor').innerText = total;
+            document.getElementById('wiseRef').innerText = refAleatoria;
+            document.getElementById('boxWiseCheckout').classList.remove('hidden');
+        }
+
+        function copiarReferencia() {
+            const refText = document.getElementById('wiseRef').innerText;
+            navigator.clipboard.writeText(refText);
+            alert('Código de Referência ' + refText + ' copiado para a área de transferência!');
+        }
+
+        // 2. Alternador de Tabs para os Vídeos
+        function trocarTab(sistema) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('bg-emerald-500', 'text-slate-950');
+                el.classList.add('bg-slate-900', 'text-slate-300');
+            });
+
+            document.getElementById('content-' + sistema).classList.remove('hidden');
+            const activeBtn = document.getElementById('tab-' + sistema);
+            activeBtn.classList.remove('bg-slate-900', 'text-slate-300');
+            activeBtn.classList.add('bg-emerald-500', 'text-slate-950');
+        }
+
+        // 3. Script de Proteção Anti-Cópia
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', function(event) {
+            if (
+                event.key === 'F12' || 
+                (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'C' || event.key === 'J')) || 
+                (event.ctrlKey && event.key === 'U')
+            ) {
+                event.preventDefault();
+                return false;
+            }
+        });
+        document.addEventListener('selectstart', event => event.preventDefault());
+    </script>
+</body>
+</html>
